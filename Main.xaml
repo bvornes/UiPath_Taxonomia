@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1254,2636" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1254,1870" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -119,16 +119,16 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="596,2571" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="596,1805" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="p6:DocumentTaxonomy" Name="DocTaxonamy" />
       <Variable x:TypeArguments="x:String" Default="C:\Doc Understandig - Taxonomia\Input" Name="pathInput" />
       <Variable x:TypeArguments="x:String" Default="C:\Doc Understandig - Taxonomia\Output" Name="pathOutput" />
       <Variable x:TypeArguments="x:String" Default="C:\Doc Understandig - Taxonomia\Dados.xlsx" Name="pathExcelDados" />
       <Variable x:TypeArguments="sd2:DataSet" Name="ExtractedDataSet" />
-      <Variable x:TypeArguments="p3:ExtractionResult" Name="ValidatedExtractionResult" />
-      <Variable x:TypeArguments="p3:ExtractionResult" Name="ExtractionResult" />
-      <Variable x:TypeArguments="p4:Document" Name="docDOM" />
+      <Variable x:TypeArguments="p4:ExtractionResult" Name="ValidatedExtractionResult" />
+      <Variable x:TypeArguments="p4:ExtractionResult" Name="ExtractionResult" />
+      <Variable x:TypeArguments="p5:Document" Name="docDOM" />
       <Variable x:TypeArguments="x:String" Name="docText" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -137,8 +137,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="554,104" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[DocTaxonamy]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="554,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;teste&quot;]" />
-    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[pathInput]" sap:VirtualizedContainerService.HintSize="554,1779" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[pathInput]" sap:VirtualizedContainerService.HintSize="554,1481" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -147,7 +146,7 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,1529" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,1231" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,20 +180,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p:DigitizeDocument>
-            <p2:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[docDOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[docText]" DocumentTypeId="Cheque.Pagamento.ChequeTeste" ExtractionResult="[ExtractionResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478,484" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[DocTaxonamy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIc9cfa7565ac34827b98957fef0b7c12e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Nota_Fiscal.Dados_NF.NF_Abril&quot;:{&quot;FieldMappings&quot;:{&quot;Nota_Fiscal.Dados_NF.NF_Abril.NumerodaNota&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.NumerodaNota&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.CodigodeVerificação&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.CodigodeVerificação&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoSocial&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoSocial&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.ValorTotaldaNota&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.ValorTotaldaNota&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoCliente&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoCliente&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.Municipio&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.Municipio&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;Cheque.Pagamento.ChequeTeste&quot;:{&quot;FieldMappings&quot;:{&quot;Cheque.Pagamento.ChequeTeste.Pay&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Cheque.Pagamento.ChequeTeste.Pay&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Cheque.Pagamento.ChequeTeste.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Cheque.Pagamento.ChequeTeste.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Cheque.Pagamento.ChequeTeste.Valor&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Cheque.Pagamento.ChequeTeste.Valor&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIc9cfa7565ac34827b98957fef0b7c12e&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIc9cfa7565ac34827b98957fef0b7c12e&quot;:[]}}">
+            <p2:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[docDOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[docText]" DocumentTypeId="Nota_Fiscal.Dados_NF.NF_Abril" ExtractionResult="[ExtractionResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478,484" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[DocTaxonamy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIc9cfa7565ac34827b98957fef0b7c12e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Nota_Fiscal.Dados_NF.NF_Abril&quot;:{&quot;FieldMappings&quot;:{&quot;Nota_Fiscal.Dados_NF.NF_Abril.NumerodaNota&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.NumerodaNota&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.CodigodeVerificação&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.CodigodeVerificação&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoSocial&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoSocial&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.ValorTotaldaNota&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.ValorTotaldaNota&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoCliente&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoCliente&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Nota_Fiscal.Dados_NF.NF_Abril.Municipio&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.Municipio&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;Cheque.Pagamento.ChequeTeste&quot;:{&quot;FieldMappings&quot;:{&quot;Cheque.Pagamento.ChequeTeste.Pay&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Cheque.Pagamento.ChequeTeste.Pay&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Cheque.Pagamento.ChequeTeste.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Cheque.Pagamento.ChequeTeste.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Cheque.Pagamento.ChequeTeste.Valor&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Cheque.Pagamento.ChequeTeste.Valor&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIc9cfa7565ac34827b98957fef0b7c12e&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIc9cfa7565ac34827b98957fef0b7c12e&quot;:[]}}">
               <p2:DataExtractionScope.Extractors>
                 <p2:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="f4CVA/8+eOuyhTHDuc5oxFAfjATUKqLkRiVyVrJmH/uwp5jxlORPyFpQ8pQ643+h2FlkCntY+b6bbeQP9dId4w==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="234,162" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UIc9cfa7565ac34827b98957fef0b7c12e" SendDocumentsForAlgorithmImprovements="True" SerializedSettings="{}{&quot;DocTypeSettings&quot;:[{&quot;DocumentTypeId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:true},{&quot;DocumentTypeId&quot;:&quot;ChequeIndia.Pagamento.Cheque&quot;,&quot;SignatureFields&quot;:[{&quot;FieldId&quot;:&quot;ChequeIndia.Pagamento.Cheque.Assinatura&quot;}],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:true}]}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;ChequeIndia.Pagamento.Cheque&quot;,&quot;FormId&quot;:&quot;8008265b&quot;,&quot;FormName&quot;:&quot;Cheque Template&quot;,&quot;OriginalFileExtension&quot;:&quot;png&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,1472.0,654.0],&quot;SkewAngle&quot;:0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Date&quot;,&quot;Box&quot;:[34.0,1048.0,56.0,22.0]},{&quot;Text&quot;:&quot;PAY&quot;,&quot;Box&quot;:[113.0,30.0,56.0,23.0]},{&quot;Text&quot;:&quot;RUPEES&quot;,&quot;Box&quot;:[207.0,109.0,121.0,24.0]},{&quot;Text&quot;:&quot;Bank02&quot;,&quot;Box&quot;:[393.0,337.0,168.0,41.0]},{&quot;Text&quot;:&quot;TREASURER&quot;,&quot;Box&quot;:[496.0,1013.0,132.0,22.0]},{&quot;Text&quot;:&quot;SECRETARY&quot;,&quot;Box&quot;:[494.0,1262.0,126.0,24.0]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;ChequeIndia.Pagamento.Cheque.Pay&quot;,&quot;Box&quot;:[70.0706,152.8813,372.0111,68.7966]},{&quot;Field&quot;:&quot;ChequeIndia.Pagamento.Cheque.Date&quot;,&quot;Box&quot;:[5.096,1137.6917,234.418,52.2344]},{&quot;Field&quot;:&quot;ChequeIndia.Pagamento.Cheque.Valor&quot;,&quot;Box&quot;:[201.2937,1119.8555,133.7711,71.3446]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril&quot;,&quot;FormId&quot;:&quot;b600d43b&quot;,&quot;FormName&quot;:&quot;Nf Template&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,842.0,1192.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;PREFEITURA&quot;,&quot;Box&quot;:[38.71,164.85,80.61,9.91]},{&quot;Text&quot;:&quot;MUNICIPAL&quot;,&quot;Box&quot;:[38.71,248.68,75.26,9.64]},{&quot;Text&quot;:&quot;DE&quot;,&quot;Box&quot;:[38.71,327.15,16.6,9.64]},{&quot;Text&quot;:&quot;CURITIBA&quot;,&quot;Box&quot;:[38.71,346.7,64.01,9.64]},{&quot;Text&quot;:&quot;NOTA&quot;,&quot;Box&quot;:[80.49,142.09,34.55,9.11]},{&quot;Text&quot;:&quot;FISCAL&quot;,&quot;Box&quot;:[80.49,178.51,43.12,9.11]},{&quot;Text&quot;:&quot;DE&quot;,&quot;Box&quot;:[80.49,223.5,16.34,9.11]},{&quot;Text&quot;:&quot;SERVIÇOS&quot;,&quot;Box&quot;:[80.22,241.71,62.4,12.05]},{&quot;Text&quot;:&quot;ELETRÔNICA&quot;,&quot;Box&quot;:[78.08,305.72,77.93,11.78]},{&quot;Text&quot;:&quot;PRESTADOR&quot;,&quot;Box&quot;:[130.3,238.23,58.65,7.5]},{&quot;Text&quot;:&quot;DE&quot;,&quot;Box&quot;:[130.3,297.69,12.59,7.23]},{&quot;Text&quot;:&quot;SERVICOS&quot;,&quot;Box&quot;:[130.3,311.34,46.87,8.57]},{&quot;Text&quot;:&quot;TOMADOR&quot;,&quot;Box&quot;:[220.29,243.86,47.94,7.23]},{&quot;Text&quot;:&quot;DE&quot;,&quot;Box&quot;:[220.56,293.13,12.86,6.96]},{&quot;Text&quot;:&quot;SERVIÇOS&quot;,&quot;Box&quot;:[220.29,306.79,48.21,9.11]},{&quot;Text&quot;:&quot;DISCRIMINACAO&quot;,&quot;Box&quot;:[295.54,224.84,79.54,8.84]},{&quot;Text&quot;:&quot;DOS&quot;,&quot;Box&quot;:[296.08,305.99,19.55,7.5]},{&quot;Text&quot;:&quot;SERVIÇOS&quot;,&quot;Box&quot;:[296.08,326.61,47.4,9.11]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.NumerodaNota&quot;,&quot;Box&quot;:[39.3524,494.0911,29.8787,16.0325]},{&quot;Field&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.CodigodeVerificação&quot;,&quot;Box&quot;:[101.296,486.8037,42.2674,13.8462]},{&quot;Field&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoSocial&quot;,&quot;Box&quot;:[133.3609,178.5433,65.5873,20.4049]},{&quot;Field&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.ValorTotaldaNota&quot;,&quot;Box&quot;:[429.2326,148.6646,51.7411,20.4049]},{&quot;Field&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.RazaoCliente&quot;,&quot;Box&quot;:[226.6406,121.7009,71.4173,21.1337]},{&quot;Field&quot;:&quot;Nota_Fiscal.Dados_NF.NF_Abril.Municipio&quot;,&quot;Box&quot;:[275.4667,120.2434,54.6561,15.3037]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;Cheque.Pagamento.ChequeTeste&quot;,&quot;FormId&quot;:&quot;3024bbab&quot;,&quot;FormName&quot;:&quot;Cheque Template&quot;,&quot;OriginalFileExtension&quot;:&quot;png&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,1472.0,654.0],&quot;SkewAngle&quot;:0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Date&quot;,&quot;Box&quot;:[34.0,1048.0,56.0,22.0]},{&quot;Text&quot;:&quot;PAY&quot;,&quot;Box&quot;:[113.0,30.0,56.0,23.0]},{&quot;Text&quot;:&quot;RUPEES&quot;,&quot;Box&quot;:[207.0,109.0,121.0,24.0]},{&quot;Text&quot;:&quot;TREASURER&quot;,&quot;Box&quot;:[496.0,1013.0,132.0,22.0]},{&quot;Text&quot;:&quot;SECRETARY&quot;,&quot;Box&quot;:[494.0,1262.0,126.0,24.0]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;Cheque.Pagamento.ChequeTeste.Pay&quot;,&quot;Box&quot;:[84.0847,156.7033,365.6411,42.0424]},{&quot;Field&quot;:&quot;Cheque.Pagamento.ChequeTeste.Date&quot;,&quot;Box&quot;:[1.274,1132.5956,249.7061,54.7825]},{&quot;Field&quot;:&quot;Cheque.Pagamento.ChequeTeste.Valor&quot;,&quot;Box&quot;:[197.4717,1121.1295,126.1271,71.3446]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
                   <p2:FormExtractor.DocumentBounds>
-                    <InArgument x:TypeArguments="p3:ResultsDocumentBounds">
-                      <DelegateArgumentValue x:TypeArguments="p3:ResultsDocumentBounds">
-                        <DelegateInArgument x:TypeArguments="p3:ResultsDocumentBounds" Name="DocumentBounds" />
+                    <InArgument x:TypeArguments="p4:ResultsDocumentBounds">
+                      <DelegateArgumentValue x:TypeArguments="p4:ResultsDocumentBounds">
+                        <DelegateInArgument x:TypeArguments="p4:ResultsDocumentBounds" Name="DocumentBounds" />
                       </DelegateArgumentValue>
                     </InArgument>
                   </p2:FormExtractor.DocumentBounds>
                   <p2:FormExtractor.DocumentObjectModel>
-                    <InArgument x:TypeArguments="p4:Document">
-                      <DelegateArgumentValue x:TypeArguments="p4:Document">
-                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                    <InArgument x:TypeArguments="p5:Document">
+                      <DelegateArgumentValue x:TypeArguments="p5:Document">
+                        <DelegateInArgument x:TypeArguments="p5:Document" Name="DocumentObjectModel" />
                       </DelegateArgumentValue>
                     </InArgument>
                   </p2:FormExtractor.DocumentObjectModel>
@@ -213,16 +212,16 @@
                     </InArgument>
                   </p2:FormExtractor.DocumentText>
                   <p2:FormExtractor.ExtractorDocumentType>
-                    <InArgument x:TypeArguments="p5:ExtractorDocumentType">
-                      <DelegateArgumentValue x:TypeArguments="p5:ExtractorDocumentType">
-                        <DelegateInArgument x:TypeArguments="p5:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                    <InArgument x:TypeArguments="p3:ExtractorDocumentType">
+                      <DelegateArgumentValue x:TypeArguments="p3:ExtractorDocumentType">
+                        <DelegateInArgument x:TypeArguments="p3:ExtractorDocumentType" Name="ExtractorDocumentType" />
                       </DelegateArgumentValue>
                     </InArgument>
                   </p2:FormExtractor.ExtractorDocumentType>
                   <p2:FormExtractor.ExtractorResult>
-                    <OutArgument x:TypeArguments="p5:ExtractorResult">
-                      <DelegateArgumentReference x:TypeArguments="p5:ExtractorResult">
-                        <DelegateOutArgument x:TypeArguments="p5:ExtractorResult" Name="ExtractorResult" />
+                    <OutArgument x:TypeArguments="p3:ExtractorResult">
+                      <DelegateArgumentReference x:TypeArguments="p3:ExtractorResult">
+                        <DelegateOutArgument x:TypeArguments="p3:ExtractorResult" Name="ExtractorResult" />
                       </DelegateArgumentReference>
                     </OutArgument>
                   </p2:FormExtractor.ExtractorResult>
@@ -242,10 +241,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p2:DataExtractionScope>
-            <p:PresentValidationStation AutomaticExtractionResults="[ExtractionResult]" DisplayName="Present Validation Station" DocumentObjectModel="[docDOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[docText]" sap:VirtualizedContainerService.HintSize="478,366" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[DocTaxonamy]" ValidatedExtractionResults="[ValidatedExtractionResult]">
+            <p:PresentValidationStation AutomaticExtractionResults="[ExtractionResult]" DisplayName="Present Validation Station" DocumentObjectModel="[docDOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[docText]" sap:VirtualizedContainerService.HintSize="478,68" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[DocTaxonamy]" ValidatedExtractionResults="[ValidatedExtractionResult]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -261,7 +260,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachFileX>
-    <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="554,395" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ExtractedDataSet.Tables]">
+    <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="554,52" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ExtractedDataSet.Tables]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sd2:DataTable">
           <ActivityAction.Argument>
@@ -280,7 +279,7 @@
       </ui:ForEach.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
